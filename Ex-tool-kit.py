@@ -9,6 +9,7 @@ import requests
 import argparse
 import json
 import random
+import base64
 from termcolor import colored
 
 
@@ -18,12 +19,12 @@ class ExToolKit:
         self.session = requests.Session()
         self.session.headers.update({"User-Agent": self.user_agent})
 
-        # 🔑 Store API keys here
+        # 🔑 Store API keys (Base64 Encoded)
         self.api_keys = {
-            "numverify": "84a23c87af2e09a3e1bb3a2fc05a10ab",
-            "whoisxmlapi": "at_9KhEUQcdxfIiJuh2rIrwlEKiKgb0d",
-            "whatcms": "d82adb49f92df5078ea646f71f333537",
-            "useragentapi": "d82adb49f92df5078ea646f71f333537"
+            "numverify": base64.b64decode("ODRhMjNjODdhZjJlMDlhM2UxYmIzYTJmYzA1YTEwYWI=").decode(),
+            "whoisxmlapi": base64.b64decode("YXRfOUtoRVVRY2R4ZklpSnVoMnJJcndsRUtpa2diMGQ=").decode(),
+            "whatcms": base64.b64decode("ZDgyYWRiNDlmOTJkZjUwNzhlYTY0NmY3MWYzMzM1Mzc=").decode(),
+            "useragentapi": base64.b64decode("ZDgyYWRiNDlmOTJkZjUwNzhlYTY0NmY3MWYzMzM1Mzc=").decode()
         }
 
     def typing_print(self, text, delay=0.002, color="green"):
@@ -70,7 +71,7 @@ class ExToolKit:
         ; kxlcl0KKKKKKKKKKx;,;;kKxlld0KddKoxKo;kK;'0KKKKKKKKKKKdcloK.;.
         ;.xOxdk0KKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKK0KKKKKKKKKKKK0xdOK.;
         '.c00000KKKKKKKKKKKOxdddxxxkkkkkkkkkxxxdddkKKKKKKKKKKKKKKKKk.,
-        .,.00000KKKKKKkoddxOXWMMMMMMMMMMMMMMMMMMWX0xxdoxKKKKKKKKKKKc..
+        .,.00000KKKKKKKKKKkddxOXWMMMMMMMMMMMMMMMMMMWX0xxdoxKKKKKKKKKc..
          ; x00000KOoodOWMMMWMWMMMMX;.',,'.,0MMMMMMWMWMW0dolkKKKKKKK.;.
          .';0000o:dNMMMMMMMMMMMMMN.         0MMMMMMMMMMMMMWxclKKKKx.,
           ;.O00x.WMMMMMMMMMMMMMMMO;,......';dMMMMMMMMMMMMMMMM:oKKK.,.
